@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis Citas</title>
-    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="Vista/menu.css">
 </head>
 <body>
     <header class="header">
         <div class="menu container">
-            <a href="/proyectofinal/src/main/webapp/menu.jsp" class="logo"> THEGC
+            <a href="menu.jsp" class="logo"> THEGC
                 <img src="<%= request.getContextPath() %>/Vista/imagen/navaja.png" alt="">
             </a>
 
@@ -19,7 +19,7 @@
 
             <nav class="navbar">
                 <ul>
-                    <li><a href="/proyectofinal/src/main/webapp/menu.jsp">Inicio
+                    <li><a href="menu.jsp">Inicio
                         <img src="<%= request.getContextPath() %>/Vista/imagen/casa.png" alt="">
                     </a></li>
                     <li><a href="mis_clientes.jsp">Mis Clientes
@@ -101,7 +101,7 @@
         </table>
     </section>
 
-    <script src="/proyectofinal/src/main/webapp/Controlador/menu.js"></script>
+    <script src="Controlador/menu.js"></script>
 
 </body>
 </html>

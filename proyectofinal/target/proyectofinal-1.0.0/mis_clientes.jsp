@@ -6,13 +6,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Mis Clientes</title>
-        <link rel="stylesheet" href="<%= request.getContextPath() %>/menu.css">
+        <link rel="stylesheet" href="Vista/menu.css">
     </head>
 
     <body>
         <header class="header">
             <div class="menu container">
-                <a href="<%= request.getContextPath() %>/menu.jsp" class="logo"> THEGC
+                <a href="menu.jsp" class="logo"> THEGC
                     <img src="<%= request.getContextPath() %>/Vista/imagen/navaja.png" alt="">
                 </a>
 
@@ -21,13 +21,13 @@
 
                 <nav class="navbar">
                     <ul>
-                        <li><a href="<%= request.getContextPath() %>/menu.jsp">Inicio
+                        <li><a href="menu.jsp">Inicio
                                 <img src="<%= request.getContextPath() %>/Vista/imagen/casa.png" alt="">
                             </a></li>
-                        <li><a href="<%= request.getContextPath() %>/mis_clientes.jsp">Mis Clientes
+                        <li><a href="mis_clientes.jsp">Mis Clientes
                                 <img src="<%= request.getContextPath() %>/Vista/imagen/clientes.png" alt="">
                             </a></li>
-                        <li><a href="<%= request.getContextPath() %>/mis_citas.jsp">Mis Citas
+                        <li><a href="mis_citas.jsp">Mis Citas
                                 <img src="<%= request.getContextPath() %>/Vista/imagen/calendario.png" alt="">
                             </a></li>
                     </ul>
@@ -101,7 +101,7 @@
             </table>
         </section>
 
-        <script src="<%= request.getContextPath() %>/Controlador/menu.js"></script>
+        <script src="/proyectofinal/src/main/webapp/Controlador/menu.js"></script>
 
     </body>
 

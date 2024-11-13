@@ -9,7 +9,7 @@ de MySQL-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de Sesión</title>
-    <link rel="stylesheet" href="<%= request.getContextPath() %>/Vista/login.css">
+    <link rel="stylesheet" href="Vista/login.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -77,7 +77,7 @@ de MySQL-->
                 }
             }
         %>
-        <form action="<%= request.getContextPath() %>/index.jsp" method="post">
+        <form action="index.jsp" method="post">
             <div class="perfil">
                 <i class="fas fa-user-circle"></i>
             </div>
@@ -95,7 +95,7 @@ de MySQL-->
             <input type="submit" value="Ingresar">
         </form>
     </div>
-    <script src="<%= request.getContextPath() %>/Controlador/login.js"></script>
+    <script src="Controlador/login.js"></script>
 </body>
 
 </html>

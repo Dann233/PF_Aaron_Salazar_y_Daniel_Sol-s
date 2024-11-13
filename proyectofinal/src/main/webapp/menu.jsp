@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Principal</title>
-    <link rel="stylesheet" href="<%= request.getContextPath() %>/Vista/menu.css">
+    <link rel="stylesheet" href="Vista/menu.css">
 
 </head>
 <body>
@@ -13,23 +13,23 @@
 
         <div class="menu container ">
 
-            <a href="<%= request.getContextPath() %>/menu.jsp" class="logo"> THEGC
+            <a href="menu.jsp" class="logo"> THEGC
                 <img src="<%= request.getContextPath() %>/Vista/imagen/navaja.png" alt="Logotipo de The Gentleman’s Club">
             </a>
             <input type="checkbox" id="menu"/>
             <label for="menu">
-               
+                <img src="<%= request.getContextPath() %>Vista/imagen/Barbershop.jpg">
             </label>
 
             <nav class="navbar">
                 <ul>
-                    <li><a href="<%= request.getContextPath() %>/menu.jsp">Inicio
+                    <li><a href="menu.jsp">Inicio
                         <img src="<%= request.getContextPath() %>/Vista/imagen/casa.png">
                     </a></li>
-                    <li><a href="<%= request.getContextPath() %>/Vista/mis_clientes.jsp">Mis Clientes
+                    <li><a href="mis_clientes.jsp">Mis Clientes
                         <img src="<%= request.getContextPath() %>/Vista/imagen/clientes.png">
                     </a></li>
-                    <li><a href="<%= request.getContextPath() %>/Vista/mis_citas.jsp">Mis Citas
+                    <li><a href="mis_citas.jsp">Mis Citas
                         <img src="<%= request.getContextPath() %>/Vista/imagen/calendario.png">
                     </a></li>
                 </ul>
@@ -44,6 +44,7 @@
                 <p>Donde el Estilo se Encuentra con la Tradición</p>
                     <a href="#" class="btn-1">Agenda con Nosotros </a>
                 </div>
+                
         </div>
 
     </header>
@@ -72,7 +73,7 @@
         <span>Barber</span>
         <div class="testimonial-content- container">
             <div class="testimonial-1">
-                <img   class="face" src="<%= request.getContextPath() %>/Vista/imagen/Barbershop.jpg">
+                <img   class="face" src="Vista/imagen/Barbershop.jpg">
                 <h4>Bienvenido, caballero. Hoy vamos a darte el estilo que mereces.</h4>
                    
             </div>
@@ -193,7 +194,7 @@
 
 
 
-    <script src="<%= request.getContextPath() %>/Controlador/menu.js"></script>
+    <script src="Controlador/menu.js"></script>
 
 </body>
 </html>

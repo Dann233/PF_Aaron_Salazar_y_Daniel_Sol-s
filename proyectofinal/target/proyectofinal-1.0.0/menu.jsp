@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Principal</title>
-    <link rel="stylesheet" href="<%= request.getContextPath() %>/Vista/menu.css">
+    <link rel="stylesheet" href="Vista/menu.css">
 
 </head>
 <body>
@@ -13,23 +13,23 @@
 
         <div class="menu container ">
 
-            <a href="<%= request.getContextPath() %>/menu.jsp" class="logo"> THEGC
+            <a href="menu.jsp" class="logo"> THEGC
                 <img src="<%= request.getContextPath() %>/Vista/imagen/navaja.png" alt="Logotipo de The Gentleman’s Club">
             </a>
             <input type="checkbox" id="menu"/>
             <label for="menu">
-               
+                <img src="<%= request.getContextPath() %>Vista/imagen/Barbershop.jpg">
             </label>
 
             <nav class="navbar">
                 <ul>
-                    <li><a href="<%= request.getContextPath() %>/menu.jsp">Inicio
+                    <li><a href="menu.jsp">Inicio
                         <img src="<%= request.getContextPath() %>/Vista/imagen/casa.png">
                     </a></li>
-                    <li><a href="<%= request.getContextPath() %>/Vista/mis_clientes.jsp">Mis Clientes
+                    <li><a href="mis_clientes.jsp">Mis Clientes
                         <img src="<%= request.getContextPath() %>/Vista/imagen/clientes.png">
                     </a></li>
-                    <li><a href="<%= request.getContextPath() %>/Vista/mis_citas.jsp">Mis Citas
+                    <li><a href="mis_citas.jsp">Mis Citas
                         <img src="<%= request.getContextPath() %>/Vista/imagen/calendario.png">
                     </a></li>
                 </ul>
@@ -44,6 +44,7 @@
                 <p>Donde el Estilo se Encuentra con la Tradición</p>
                     <a href="#" class="btn-1">Agenda con Nosotros </a>
                 </div>
+                
         </div>
 
     </header>
@@ -61,7 +62,7 @@
                
             </div>
             <div class=" about-img">
-                <img src="<%= request.getContextPath() %>/Vista/imagen/tiempo.jpg" alt="">
+                <img src="<%= request.getContextPath() %>/Vista/imagen/tiempo.jpg">
             </div>
 
         </div>
@@ -72,7 +73,7 @@
         <span>Barber</span>
         <div class="testimonial-content- container">
             <div class="testimonial-1">
-                <img   class="face" src="<%= request.getContextPath() %>/Vista/imagen/Barbershop.jpg" alt="">
+                <img   class="face" src="Vista/imagen/Barbershop.jpg">
                 <h4>Bienvenido, caballero. Hoy vamos a darte el estilo que mereces.</h4>
                    
             </div>
@@ -130,7 +131,7 @@
         <div class="blog-content container">
 
             <div class="blog-1">
-                <img src="<%= request.getContextPath() %>/Vista/imagen/Elvis.jpg" alt="">
+                <img src="<%= request.getContextPath() %>/Vista/imagen/Elvis.jpg">
                 <div class="blog-txt">
                     <span>La barbería que nunca duerme.</span>
                     <h3>Porque el estilo no tiene horario.</h3>
@@ -138,7 +139,7 @@
                 </div>
             </div>
             <div class="blog-1">
-                <img src="<%= request.getContextPath() %>/Vista/imagen/Flow.jpg" alt="">
+                <img src="<%= request.getContextPath() %>/Vista/imagen/Flow.jpg">
                 <div class="blog-txt">
                     <span>Old school con un toque de ciudad.</span>
                     <h3>Inspirado en los grandes de ayer, pensado para el caballero de hoy.</h3>
@@ -146,7 +147,7 @@
                 </div>
             </div>
             <div class="blog-1">
-                <img src="<%= request.getContextPath() %>/Vista/imagen/David.jpg" alt="">
+                <img src="<%= request.getContextPath() %>/Vista/imagen/David.jpg">
                 <div class="blog-txt">
                     <span>Porque un caballero siempre lleva el estilo de su ciudad.</span>
                     <h3>Refinamiento con actitud de metrópoli.</h3>
@@ -193,7 +194,7 @@
 
 
 
-    <script src="<%= request.getContextPath() %>/Controlador/menu.js"></script>
+    <script src="Controlador/menu.js"></script>
 
 </body>
 </html>
