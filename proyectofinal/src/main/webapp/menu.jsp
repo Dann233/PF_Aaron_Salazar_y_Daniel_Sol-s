@@ -13,7 +13,7 @@
 
         <div class="menu container ">
 
-            <a href="<%= request.getContextPath() %>/menu.jsp" class="logo"> THEGC
+            <a href="menu.jsp" class="logo"> THEGC
                 <img src="<%= request.getContextPath() %>/Vista/imagen/navaja.png" alt="Logotipo de The Gentleman’s Club">
             </a>
             <input type="checkbox" id="menu"/>
@@ -22,13 +22,13 @@
 
             <nav class="navbar">
                 <ul>
-                    <li><a href="<%= request.getContextPath() %>/menu.jsp">Inicio
+                    <li><a href="menu.jsp">Inicio
                         <img src="<%= request.getContextPath() %>/Vista/imagen/casa.png">
                     </a></li>
-                    <li><a href="<%= request.getContextPath() %>/mis_clientes.jsp">Mis Clientes
+                    <li><a href="mis_clientes.jsp">Mis Clientes
                         <img src="<%= request.getContextPath() %>/Vista/imagen/clientes.png">
                     </a></li>
-                    <li><a href="<%= request.getContextPath() %>/mis_citas.jsp">Mis Citas
+                    <li><a href="mis_citas.jsp">Mis Citas
                         <img src="<%= request.getContextPath() %>/Vista/imagen/calendario.png">
                     </a></li>
                 </ul>
@@ -39,7 +39,7 @@
         </div>
         <div class="header- content container">
             <div class="header-txt">
-                <h1>The Gentleman’s Club</h1>
+                <h1>The Gentleman's Club</h1>
                 <p>Donde el Estilo se Encuentra con la Tradición</p>
                     <a href="#" class="btn-1">Agenda con Nosotros </a>
                 </div>
@@ -53,7 +53,7 @@
         <div class="about-content container">
 
             <div class="about-txt">
-                <span>The Gentleman’s Club</span>
+                <span>The Gentleman's Club</span>
                 <h2>Tu refugio de estilo y distinción. Siéntete como en casa, caballero.
 
                 </h2>
@@ -85,7 +85,7 @@
 
     <main class="plans">
 
-        <span>The Gentleman’s Club</span>
+        <span>The Gentleman's Club</span>
         <h2>Nuestros paquetes</h2>
         <hr>
         <div class="plans-content container">
@@ -126,7 +126,7 @@
     
 
     <section class="blog">
-        <span>The Gentleman’s Club</span>
+        <span>The Gentleman's Club</span>
         <div class="blog-content container">
 
             <div class="blog-1">
