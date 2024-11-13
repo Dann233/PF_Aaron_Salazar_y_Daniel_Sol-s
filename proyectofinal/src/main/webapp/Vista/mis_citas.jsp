@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis Citas</title>
-    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="<%= request.getContextPath() %>/menu.css">
 </head>
 <body>
     <header class="header">
@@ -101,7 +101,7 @@
         </table>
     </section>
 
-    <script src="/menu.js"></script>
+    <script src="<%= request.getContextPath() %>/Controlador/menu.js"></script>
 
 </body>
 </html>

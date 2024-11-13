@@ -6,14 +6,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Mis Clientes</title>
-        <link rel="stylesheet" href="menu.css">
+        <link rel="stylesheet" href="<%= request.getContextPath() %>/menu.css">
     </head>
 
     <body>
         <header class="header">
             <div class="menu container">
-                <a href="/menu.jsp" class="logo"> THEGC
-                    <img src="/Vista/imagen/navaja.png" alt="">
+                <a href="<%= request.getContextPath() %>/menu.jsp" class="logo"> THEGC
+                    <img src="<%= request.getContextPath() %>/Vista/imagen/navaja.png" alt="">
                 </a>
 
                 <input type="checkbox" id="menu" />
@@ -21,14 +21,14 @@
 
                 <nav class="navbar">
                     <ul>
-                        <li><a href="/menu.jsp">Inicio
-                                <img src="/Vista/imagen/casa.png" alt="">
+                        <li><a href="<%= request.getContextPath() %>/menu.jsp">Inicio
+                                <img src="<%= request.getContextPath() %>/Vista/imagen/casa.png" alt="">
                             </a></li>
-                        <li><a href="/mis_clientes.jsp">Mis Clientes
-                                <img src="/Vista/imagen/clientes.png" alt="">
+                        <li><a href="<%= request.getContextPath() %>/mis_clientes.jsp">Mis Clientes
+                                <img src="<%= request.getContextPath() %>/Vista/imagen/clientes.png" alt="">
                             </a></li>
-                        <li><a href="/mis_citas.jsp">Mis Citas
-                                <img src="/Vista/imagen/calendario.png" alt="">
+                        <li><a href="<%= request.getContextPath() %>/mis_citas.jsp">Mis Citas
+                                <img src="<%= request.getContextPath() %>/Vista/imagen/calendario.png" alt="">
                             </a></li>
                     </ul>
                 </nav>
@@ -44,7 +44,7 @@
         <section class="search-form container">
             <input type="text" placeholder="Digite la Cédula a buscar">
             <button class="btn-buscar">
-                <img src='/Vista/imagen/buscar(1).png' alt="Buscar" style="height: 24px; vertical-align: middle;">
+                <img src='<%= request.getContextPath() %>/Vista/imagen/buscar(1).png' alt="Buscar" style="height: 24px; vertical-align: middle;">
             </button>
 
 
@@ -101,7 +101,7 @@
             </table>
         </section>
 
-        <script src="/proyectofinal/src/main/webapp/Controlador/menu.js"></script>
+        <script src="<%= request.getContextPath() %>/Controlador/menu.js"></script>
 
     </body>
 
