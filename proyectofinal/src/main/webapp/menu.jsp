@@ -14,7 +14,7 @@
         <div class="menu container ">
 
             <a href="menu.jsp" class="logo"> THEGC
-                <img src="<%= request.getContextPath() %>/Vista/imagen/navaja.png" alt="Logotipo de The Gentleman’s Club">
+                <img src="<%= request.getContextPath() %>/Vista/imagen/navaja.png">
             </a>
             <input type="checkbox" id="menu"/>
             <label for="menu">

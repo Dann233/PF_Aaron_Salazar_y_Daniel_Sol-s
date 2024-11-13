@@ -16,7 +16,7 @@
                     <img src="<%= request.getContextPath() %>/Vista/imagen/navaja.png" alt="">
                 </a>
 
-                <input type="checkbox" id="menu" />
+                <input type="checkbox" id="menu"/>
                 <label for="menu"></label>
 
                 <nav class="navbar">
