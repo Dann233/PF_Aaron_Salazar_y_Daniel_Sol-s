@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width= , initial-scale=1.0">
     <title>Menu Principal</title>
-    <link rel="stylesheet" href="Vista/menu.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/Vista/menu.css">
 </head>
 <body>
     <header class="header">
 
         <div class="menu container ">
 
-            <a href="#" class="logo">Logo</a>
-
+            <a href="/menu.jsp" class="logo"> THEGC
+                <img src="/Vista/imagen/navaja.png" alt="">
+            </a>
             <input type="checkbox" id="menu"/>
             <label for="menu">
                
@@ -22,12 +22,18 @@
 
             <nav class="navbar">
                 <ul>
-                    <li> <a href="#">Registrar Cita</a></li>
-                    <li> <a href="#">Buscar Cita</a></li>
-                    <li> <a href="#">Mis Citas</a></li>
+                    <li><a href="/menu.jsp">Inicio
+                        <img src="/Vista/imagen/casa.png" alt="">
+                    </a></li>
+                    <li><a href="/Vista/mis_clientes.jsp">Mis Clientes
+                        <img src="/Vista/imagen/clientes.png" alt="">
+                    </a></li>
+                    <li><a href="/Vista/mis_citas.jsp">Mis Citas
+                        <img src="/Vista/imagen/calendario.png" alt="">
+                    </a></li>
                 </ul>
-
             </nav>
+            
 
             
         </div>
@@ -54,7 +60,7 @@
                
             </div>
             <div class=" about-img">
-                <img src="Vista/imagen/tiempo.jpg" alt="">
+                <img src="/Vista/imagen/tiempo.jpg" alt="">
             </div>
 
         </div>
@@ -65,7 +71,7 @@
         <span>Barber</span>
         <div class="testimonial-content- container">
             <div class="testimonial-1">
-                <img   class="face" src="Vista/imagen/Barbershop.jpg" alt="">
+                <img   class="face" src="/Vista/imagen/Barbershop.jpg" alt="">
                 <h4>Bienvenido, caballero. Hoy vamos a darte el estilo que mereces.</h4>
                    
             </div>
@@ -123,7 +129,7 @@
         <div class="blog-content container">
 
             <div class="blog-1">
-                <img src="Vista/imagen/Elvis.jpg" alt="">
+                <img src="/Vista/imagen/Elvis.jpg" alt="">
                 <div class="blog-txt">
                     <span>La barbería que nunca duerme.</span>
                     <h3>Porque el estilo no tiene horario.</h3>
@@ -131,7 +137,7 @@
                 </div>
             </div>
             <div class="blog-1">
-                <img src="Vista/imagen/Flow.jpg" alt="">
+                <img src="/Vista/imagen/Flow.jpg" alt="">
                 <div class="blog-txt">
                     <span>Old school con un toque de ciudad.</span>
                     <h3>Inspirado en los grandes de ayer, pensado para el caballero de hoy.</h3>
@@ -139,7 +145,7 @@
                 </div>
             </div>
             <div class="blog-1">
-                <img src="Vista/imagen/David.jpg" alt="">
+                <img src="/Vista/imagen/David.jpg" alt="">
                 <div class="blog-txt">
                     <span>Porque un caballero siempre lleva el estilo de su ciudad.</span>
                     <h3>Refinamiento con actitud de metrópoli.</h3>
@@ -177,123 +183,13 @@
 
 
     </footer>
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <h2>Registrar Cita</h2>
-            <form id="form-clientes" action ="Modelo/insertar_cliente.jsp" method="POST">
-                <label for="cedula">Cédula:</label>
-                <input type="text" id="cedula" name="cedula" required>
-                
-                <label for="nombre1">Primer Nombre:</label>
-                <input type="text" id="nombre1" name="nombre1" required>
-                
-                <label for="nombre2">Segundo Nombre:</label>
-                <input type="text" id="nombre2" name="nombre2">
-                
-                <label for="apellido1">Primer Apellido:</label>
-                <input type="text" id="apellido1" name="apellido1" required>
-                
-                <label for="apellido2">Segundo Apellido:</label>
-                <input type="text" id="apellido2" name="apellido2">
-                
-                <div class="modal-buttons" >
-                <button type="button" onclick="closeModal()">Cancelar</button>
-                <button type="button" onclick="submitForm('Modelo/insertar_cliente.jsp')"><i class="fas fa-plus"></i>Agregar</button>
-                <button type="button" onclick="submitForm('Modelo/actualizar_cliente.jsp')">Actualizar</button>
-                <button type="button" onclick="submitForm('Modelo/eliminar_cliente.jsp')">Eliminar</button>
-                </div>
-            </form>
-        </div>
-    </div>
- 
-    <div id="modalDate" class="modal">
-        <div class="modal-content">
-            <h2>Seleccione Fecha y Hora de la Cita</h2>
-            <form>
-                <label for="fecha">Fecha:</label>
-                <input type="date" id="fecha" name="fecha" required>
-                
-                <label for="hora">Hora:</label>
-                <input type="time" id="hora" name="hora" required>
-                
-                <div class="modal-buttons">
-                    <button type="button" onclick="closeModalDate()">Cancelar</button>
-                    <button type="submit">Aceptar</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-
    
-<div id="modalBuscarCita" class="modal">
-    <div class="modal-content">
-        <h2>Buscar Cita</h2>
-        <form>
-            <label for="idCita">ID Cita:</label>
-            <input type="number" id="idCita" name="idCita" min="1" required>
-            
-            <div class="modal-buttons">
-                <button type="button" onclick="closeBuscarModal()">Cancelar</button>
-                <button type="button" onclick="buscarCita()">Aceptar</button>
-            </div>
+
         </form>
-    </div>
-</div>
-
-
-<div id="modalDetalleCita" class="modal">
-    <div class="modal-content">
-        <h2>Detalles de la Cita</h2>
-        <table border="1" style="width: 100%; border-collapse: collapse; text-align: center;">
-            <thead>
-                <tr>
-                    <th>ID Cita</th>
-                    <th>Cédula</th>
-                    <th>Fecha</th>
-                    <th>Hora</th>
-                </tr>
-            </thead>
-            <tbody id="detalleCitaBody">
-              
-            </tbody>
+       
         </table>
-        <div class="modal-buttons">
-            <button type="button" onclick="closeDetalleModal()">Cancelar</button>
-            <button type="button" onclick="closeDetalleModal()">Aceptar</button>
-        </div>
-    </div>
-</div>
+       
 
-<div id="modalMisCitas" class="modal">
-    <div class="modal-content">
-        <h2>Mis Citas</h2>
-        <table border="1" style="width: 100%; border-collapse: collapse; text-align: center;">
-            <thead>
-                <tr>
-                    <th>ID Cita</th>
-                    <th>Cédula Cliente</th>
-                    <th>Hora</th>
-                    <th>Fecha</th>
-                </tr>
-            </thead>
-            <tbody id="misCitasBody">
-               
-                <tr>
-                    <td>1</td>
-                    <td>123456789</td>
-                    <td>10:00pm</td>
-                    <td>2024-11-12</td>
-                    
-                </tr>
-                
-            </tbody>
-        </table>
-        <div class="modal-buttons">
-            <button type="button" onclick="closeMisCitasModal()">Cancelar</button>
-        </div>
-    </div>
-</div>
 
 
     <script src="Controlador/menu.js"></script>
