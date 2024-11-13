@@ -24,13 +24,13 @@
             <nav class="navbar">
                 <ul>
                     <li><a href="<%= request.getContextPath() %>/menu.jsp">Inicio
-                        <img src="<%= request.getContextPath() %>/Vista/imagen/casa.png" alt="">
+                        <img src="<%= request.getContextPath() %>/Vista/imagen/casa.png">
                     </a></li>
                     <li><a href="<%= request.getContextPath() %>/Vista/mis_clientes.jsp">Mis Clientes
-                        <img src="<%= request.getContextPath() %>/Vista/imagen/clientes.png" alt="">
+                        <img src="<%= request.getContextPath() %>/Vista/imagen/clientes.png">
                     </a></li>
                     <li><a href="<%= request.getContextPath() %>/Vista/mis_citas.jsp">Mis Citas
-                        <img src="<%= request.getContextPath() %>/Vista/imagen/calendario.png" alt="">
+                        <img src="<%= request.getContextPath() %>/Vista/imagen/calendario.png">
                     </a></li>
                 </ul>
             </nav>
@@ -61,7 +61,7 @@
                
             </div>
             <div class=" about-img">
-                <img src="<%= request.getContextPath() %>/Vista/imagen/tiempo.jpg" alt="">
+                <img src="<%= request.getContextPath() %>/Vista/imagen/tiempo.jpg">
             </div>
 
         </div>
@@ -72,7 +72,7 @@
         <span>Barber</span>
         <div class="testimonial-content- container">
             <div class="testimonial-1">
-                <img   class="face" src="<%= request.getContextPath() %>/Vista/imagen/Barbershop.jpg" alt="">
+                <img   class="face" src="<%= request.getContextPath() %>/Vista/imagen/Barbershop.jpg">
                 <h4>Bienvenido, caballero. Hoy vamos a darte el estilo que mereces.</h4>
                    
             </div>
@@ -130,7 +130,7 @@
         <div class="blog-content container">
 
             <div class="blog-1">
-                <img src="<%= request.getContextPath() %>/Vista/imagen/Elvis.jpg" alt="">
+                <img src="<%= request.getContextPath() %>/Vista/imagen/Elvis.jpg">
                 <div class="blog-txt">
                     <span>La barbería que nunca duerme.</span>
                     <h3>Porque el estilo no tiene horario.</h3>
@@ -138,7 +138,7 @@
                 </div>
             </div>
             <div class="blog-1">
-                <img src="<%= request.getContextPath() %>/Vista/imagen/Flow.jpg" alt="">
+                <img src="<%= request.getContextPath() %>/Vista/imagen/Flow.jpg">
                 <div class="blog-txt">
                     <span>Old school con un toque de ciudad.</span>
                     <h3>Inspirado en los grandes de ayer, pensado para el caballero de hoy.</h3>
@@ -146,7 +146,7 @@
                 </div>
             </div>
             <div class="blog-1">
-                <img src="<%= request.getContextPath() %>/Vista/imagen/David.jpg" alt="">
+                <img src="<%= request.getContextPath() %>/Vista/imagen/David.jpg">
                 <div class="blog-txt">
                     <span>Porque un caballero siempre lleva el estilo de su ciudad.</span>
                     <h3>Refinamiento con actitud de metrópoli.</h3>

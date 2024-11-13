@@ -24,13 +24,13 @@
             <nav class="navbar">
                 <ul>
                     <li><a href="<%= request.getContextPath() %>/menu.jsp">Inicio
-                        <img src="<%= request.getContextPath() %>/Vista/imagen/casa.png" alt="">
+                        <img src="<%= request.getContextPath() %>/Vista/imagen/casa.png">
                     </a></li>
                     <li><a href="<%= request.getContextPath() %>/Vista/mis_clientes.jsp">Mis Clientes
-                        <img src="<%= request.getContextPath() %>/Vista/imagen/clientes.png" alt="">
+                        <img src="<%= request.getContextPath() %>/Vista/imagen/clientes.png">
                     </a></li>
                     <li><a href="<%= request.getContextPath() %>/Vista/mis_citas.jsp">Mis Citas
-                        <img src="<%= request.getContextPath() %>/Vista/imagen/calendario.png" alt="">
+                        <img src="<%= request.getContextPath() %>/Vista/imagen/calendario.png">
                     </a></li>
                 </ul>
             </nav>

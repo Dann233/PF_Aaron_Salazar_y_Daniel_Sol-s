@@ -1,7 +1,7 @@
 // Abrir modal "Registrar Cita"
 document.querySelector('.navbar ul li:nth-child(1) a').addEventListener('click', function(e) {
     e.preventDefault();
-    document.getElementById('modal').style.display = 'flex';
+    //document.getElementById('modal').style.display = 'flex';
 });
 
 // Redirigir a ProcesosClientes.html al hacer clic en "Buscar Cita"
@@ -13,7 +13,7 @@ document.querySelector('.navbar ul li:nth-child(2) a').addEventListener('click',
 // Abrir modal "Mis Citas"
 document.querySelector('.navbar ul li:nth-child(3) a').addEventListener('click', function(e) {
     e.preventDefault();
-    document.getElementById('modalMisCitas').style.display = 'flex';
+    //document.getElementById('modalMisCitas').style.display = 'flex';
 });
 
 // Funciones para cerrar los modales específicos
@@ -47,12 +47,14 @@ function closeDetalleModal() {
     document.getElementById('modalDetalleCita').style.display = 'none';
 }
 
+/*
 // Evento para cerrar el modal "Registrar Cita" y abrir el modal de fecha
 document.querySelector('#modal .modal-buttons button[type="submit"]').addEventListener('click', function(e) {
     e.preventDefault();
     document.getElementById('modal').style.display = 'none';
     document.getElementById('modalDate').style.display = 'flex';
 });
+*/
 
 function closeModalDate() {
     document.getElementById('modalDate').style.display = 'none';

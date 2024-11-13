@@ -10,8 +10,8 @@
 <body>
     <header class="header">
         <div class="menu container">
-            <a href="/menu.jsp" class="logo"> THEGC
-                <img src="/Vista/imagen/navaja.png" alt="">
+            <a href="<%= request.getContextPath() %>/menu.jsp" class="logo"> THEGC
+                <img src="<%= request.getContextPath() %>/Vista/imagen/navaja.png" alt="">
             </a>
 
             <input type="checkbox" id="menu"/>
@@ -19,14 +19,14 @@
 
             <nav class="navbar">
                 <ul>
-                    <li><a href="/menu.jsp">Inicio
-                        <img src="/Vista/imagen/casa.png" alt="">
+                    <li><a href="<%= request.getContextPath() %>/menu.jsp">Inicio
+                        <img src="<%= request.getContextPath() %>/Vista/imagen/casa.png" alt="">
                     </a></li>
-                    <li><a href="/mis_clientes.jsp">Mis Clientes
-                        <img src="/Vista/imagen/clientes.png" alt="">
+                    <li><a href="<%= request.getContextPath() %>/mis_clientes.jsp">Mis Clientes
+                        <img src="<%= request.getContextPath() %>/Vista/imagen/clientes.png" alt="">
                     </a></li>
-                    <li><a href="/mis_citas.jsp">Mis Citas
-                        <img src="/Vista/imagen/calendario.png" alt="">
+                    <li><a href="<%= request.getContextPath() %>/mis_citas.jsp">Mis Citas
+                        <img src="<%= request.getContextPath() %>/Vista/imagen/calendario.png" alt="">
                     </a></li>
                 </ul>
             </nav>
@@ -49,7 +49,7 @@
                 <option value="cedula3">Cédula 3</option>
             </select>
             <button class="btn-buscar">
-                <img src='/Vista/imagen/buscar(1).png' alt="Buscar" style="height: 24px; vertical-align: middle;">
+                <img src='<%= request.getContextPath() %>/Vista/imagen/buscar(1).png' alt="Buscar" style="height: 24px; vertical-align: middle;">
             </button>
         </div>
 
