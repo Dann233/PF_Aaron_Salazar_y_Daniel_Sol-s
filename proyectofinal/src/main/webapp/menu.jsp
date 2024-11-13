@@ -13,23 +13,22 @@
 
         <div class="menu container ">
 
-            <a href="menu.jsp" class="logo"> THEGC
+            <a href="<%= request.getContextPath() %>/menu.jsp" class="logo"> THEGC
                 <img src="<%= request.getContextPath() %>/Vista/imagen/navaja.png" alt="Logotipo de The Gentleman’s Club">
             </a>
             <input type="checkbox" id="menu"/>
             <label for="menu">
-                <img src="<%= request.getContextPath() %>Vista/imagen/Barbershop.jpg">
             </label>
 
             <nav class="navbar">
                 <ul>
-                    <li><a href="menu.jsp">Inicio
+                    <li><a href="<%= request.getContextPath() %>/menu.jsp">Inicio
                         <img src="<%= request.getContextPath() %>/Vista/imagen/casa.png">
                     </a></li>
-                    <li><a href="mis_clientes.jsp">Mis Clientes
+                    <li><a href="<%= request.getContextPath() %>/mis_clientes.jsp">Mis Clientes
                         <img src="<%= request.getContextPath() %>/Vista/imagen/clientes.png">
                     </a></li>
-                    <li><a href="mis_citas.jsp">Mis Citas
+                    <li><a href="<%= request.getContextPath() %>/mis_citas.jsp">Mis Citas
                         <img src="<%= request.getContextPath() %>/Vista/imagen/calendario.png">
                     </a></li>
                 </ul>

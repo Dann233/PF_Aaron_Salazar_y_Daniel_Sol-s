@@ -28,14 +28,14 @@ img{
         rgba(29,30,35,0.8),
         rgba(29,30,35,0.8)
     ),
-    url(/Vista/imagen/Barbershop.jpg);
+    url(imagen/Barbershop.jpg);
     background-position: top center;
     background-repeat:  no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
-    min-height: 80vh;
-    padding: 80px 0 0 0;
+    min-height: 60vh;
+    padding: 0;
 }
 
 .menu{
