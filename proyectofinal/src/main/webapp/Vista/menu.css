@@ -82,10 +82,6 @@ color: #F56349;
     width: 25px;
 }
 
-.menu-icono{
-    width: 25px;
-}
-
 .menu label{
     cursor: pointer;
 }
@@ -503,20 +499,31 @@ header .menu ul li a:hover {
     padding: 20px;
     border-radius: 8px;
     margin: 20px auto;
-    display: grid;
+    display: flex;
     gap: 10px;
     grid-template-columns: 1fr 1fr;
     max-width: 600px;
     text-align: center;
+    align-items: center;
 }
 
-.search-form input, .search-form select {
+.search-form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width:  calc(100% - 120px);
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.search-form select {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
     width: 100%;
     font-size: 16px;
 }
+
 
 .search-form .btn-buscar {
     background-color: #28A745;
@@ -526,6 +533,7 @@ header .menu ul li a:hover {
     cursor: pointer;
     border-radius: 5px;
     font-size: 16px;
+    height: 44px;
 }
 
 .action-buttons {

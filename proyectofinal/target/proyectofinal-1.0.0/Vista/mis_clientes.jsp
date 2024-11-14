@@ -44,10 +44,12 @@
         <section class="search-form container">
             <form id="form_cliente" method="POST">
 
+
                 <input type="text" placeholder="Digite la Cédula a buscar" id="cedula_buscada" name="cedula_buscada">
                 <button class="btn-buscar" type="button" id="btn-buscar" name="btn-buscar">
-                    <img src='imagen/buscar(1).png' alt="Buscar" style="height: 24px; vertical-align: right inherit;">
+                    <img src='imagen/buscar(1).png' alt="Buscar" style="height: 24px; vertical-align: aline;">
                 </button>
+
 
                 <input type="text" placeholder="Cédula" id="cedula" name="cedula" required>
                 <input type="text" placeholder="Primer Nombre" id="nombre1" name="nombre1" required>
@@ -57,8 +59,9 @@
 
                 <div class="action-buttons">
                     <button name="btn-agregar" id="btn-agregar" class="btn-agregar" type="button">Agregar</button>
-                    <button name="btn-actualizar" id="btn-actualizar" class="btn-actualizar" type="button">Actualizar</button>
-                    <button name="btn-eliminar" id="btn-eliminar" class="btn-eliminar" type="button" >Eliminar</button>
+                    <button name="btn-actualizar" id="btn-actualizar" class="btn-actualizar"
+                        type="button">Actualizar</button>
+                    <button name="btn-eliminar" id="btn-eliminar" class="btn-eliminar" type="button">Eliminar</button>
                 </div>
             </form>
         </section>
