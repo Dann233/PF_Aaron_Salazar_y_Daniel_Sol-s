@@ -1,17 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
     const buscarBtn_id = document.getElementById('btn-buscar-id');
-    const buscarBtn = document.getElementById('btn-buscar');
+    const buscarBtn_cedula = document.getElementById('btn-buscar');
     const editarBtn = document.getElementById('btn-actualizar');
     const eliminarBtn = document.getElementById('btn-eliminar');
     const agregarBtn = document.getElementById('btn-agregar');
 
     buscarBtn_id.addEventListener('click', function () {
-        const idbuscada = document.getElementById('id_cita').value.trim();
-        if (idbuscada === '') {
+        const idcita = document.getElementById('id_cita').value.trim();
+        if (idcita === '') {
             alert('Por favor, ingrese un número de cita para buscar.');
             return;
         }
-        fetch(`../Modelo/buscar_cita.jsp?id_cita=${idbuscada}`)
+        fetch(`../Modelo/buscar_cita.jsp?id_cita=${idcita}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Ocurrió un problema al realizar la búsqueda.');
@@ -19,11 +19,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 return response.json();
             })
             .then(data => {
-                if (data && data.cedula && data.fecha && data.hora) {
-                    const form_cita = document.getElementById('form_cita');
-                    form_cita.querySelector('#cedula').value = data.cedula;
-                    form_cita.querySelector('#fecha-cita').value = data.fecha;
-                    form_cita.querySelector('#hora-cita').value = data.hora;
+                if (data.cedula && data.fecha && data.hora) {
+                    document.getElementById('cedula').value = data.cedula;
+                    document.getElementById('fecha-cita').value = data.fecha;
+                    document.getElementById('hora-cita').value = data.hora;
                 } else {
                     alert('Número de cita no encontrado');
                 }
@@ -34,7 +33,35 @@ document.addEventListener('DOMContentLoaded', function () {
             });
     });
 
-    
+    buscarBtn_cedula.addEventListener('click', function () {
+        const cedulabuscada = document.getElementById('cedula').value.trim();
+        if (idcita === '') {
+            alert('Por favor, ingrese un número de cita para buscar.');
+            return;
+        }
+        fetch(`../Modelo/buscar_cedula_en_cita.jsp?id_cita=${cedulabuscada}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Ocurrió un problema al realizar la búsqueda.');
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.idcita && data.cedula && data.fecha && data.hora) {
+                    document.getElementById('id_cita').value = data.id_cita;
+                    document.getElementById('cedula').value = data.cedula;
+                    document.getElementById('fecha-cita').value = data.fecha;
+                    document.getElementById('hora-cita').value = data.hora;
+                } else {
+                    alert('El cliente no posee ninguna cita agendada');
+                }
+            })
+            .catch(error => {
+                console.error('Error en la búsqueda:', error);
+                document.getElementById('mensaje').innerHTML = '<p>Ocurrió un error en la búsqueda.</p>';
+            });
+    });
+
     editarBtn.addEventListener('click', function (event) {
         const form_cita = document.getElementById('form_cita');
         if (!validarCampos(form_cita)) {

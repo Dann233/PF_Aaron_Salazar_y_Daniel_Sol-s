@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="application/json; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="java.sql.*, java.util.*" %>
+<%@ page import="java.sql.*" %>
 
 <%
     String entrada_idcita = request.getParameter("id_cita");
@@ -12,6 +12,7 @@
     ResultSet rs = null;
 
     String SQL = "CALL buscar_cita(?);";
+    response.setContentType("application/json; charset=UTF-8");
 %>
 
 <%
@@ -22,27 +23,25 @@
         stmt.setString(1, entrada_idcita);
         rs = stmt.executeQuery();
 
-       
         if (rs.next()) {
             String cedula = rs.getString("cedula_cliente");
             String fecha = rs.getString("fecha");
             String hora = rs.getString("hora");
 
-            
+            // Imprimir el JSON directamente
             out.print("{");
             out.print("\"cedula\": \"" + cedula + "\",");
             out.print("\"fecha\": \"" + fecha + "\",");
-            out.print("\"hora\": \"" + hora + "\",");
+            out.print("\"hora\": \"" + hora + "\"");
             out.print("}");
         } else {
-            // Si no se encuentra la cita, devolver un objeto vacío
+            // Si no se encuentra la cita, devolver un objeto JSON vacío
             out.print("{}");
         }
     } catch (SQLException | ClassNotFoundException e) {
         e.printStackTrace();
-        out.print("{}");
+        out.print("{}"); // Error en la respuesta como JSON vacío
     } finally {
-        // Cerrar las conexiones
         if (rs != null) rs.close();
         if (stmt != null) stmt.close();
         if (conn != null) conn.close();
