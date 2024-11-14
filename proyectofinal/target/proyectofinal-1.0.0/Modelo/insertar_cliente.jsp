@@ -32,7 +32,7 @@ try {
 
     if (filaInsertada > 0) {
         request.setAttribute("mensaje", "El paciente se ha eliminado correctamente!");
-        response.sendRedirect("mis_clientes.html");
+        response.sendRedirect("../Vista/mis_clientes.html");
 
    
     } else {

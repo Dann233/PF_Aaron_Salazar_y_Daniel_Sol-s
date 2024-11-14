@@ -12,7 +12,7 @@
     <body>
         <header class="header">
             <div class="menu container">
-                <a href="pagina.html" class="logo"> THEGC
+                <a href="pagina.jsp" class="logo"> THEGC
                     <img src="imagen/navaja.png" alt="">
                 </a>
 
@@ -21,13 +21,13 @@
 
                 <nav class="navbar">
                     <ul>
-                        <li><a href="pagina.html">Inicio
+                        <li><a href="pagina.jsp">Inicio
                                 <img src="imagen/casa.png" alt="">
                             </a></li>
-                        <li><a href="mis_clientes.html">Mis Clientes
+                        <li><a href="mis_clientes.jsp">Mis Clientes
                                 <img src="imagen/clientes.png" alt="">
                             </a></li>
-                        <li><a href="mis_citas.html">Mis Citas
+                        <li><a href="mis_citas.jsp">Mis Citas
                                 <img src="imagen/calendario.png" alt="">
                             </a></li>
                     </ul>
@@ -42,7 +42,7 @@
         </header>
 
         <section class="search-form container">
-            <form id="form_cliente" method="POST" action="Modelo/insertar_cliente.jsp">
+            <form id="form_cliente" method="POST" action="../Modelo/insertar_cliente.jsp">
             <input type="text" placeholder="Digite la Cédula a buscar">
             <button class="btn-buscar" type="submit">
                 <img src='imagen/buscar(1).png' alt="Buscar"
@@ -57,45 +57,14 @@
             <div class="action-buttons">
                 <button type="button" onclick="closeModal()">Cancelar</button>
                 <button type="submit"><i class="fas fa-plus"></i>Agregar</button>
-                <button type="button" onclick="btns_clientes('Modelo/actualizar_cliente.jsp')">Actualizar</button>
+                <button type="button" onclick="btns_clientes('proyectofinal/src/main/webapp/Modelo/actualizar_cliente.jsp')">Actualizar</button>
                 <button type="button" onclick="btns_clientes('Modelo/eliminar_cliente.jsp')">Eliminar</button>
             </div>
         </form>
         </section>
 
         <section class="table-section container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Cédula</th>
-                        <th>Primer Nombre</th>
-                        <th>Segundo Nombre</th>
-                        <th>Primer Apellido</th>
-                        <th>Segundo Apellido </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-
-                    </tr>
-                    <tr>
-
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-
-                    </tr>
-                </tbody>
-            </table>
+            <jsp:include page="../Modelo/seleccionar_cliente.jsp" />
         </section>
 
         <script src="/proyectofinal/src/main/webapp/Controlador/menu.js"></script>

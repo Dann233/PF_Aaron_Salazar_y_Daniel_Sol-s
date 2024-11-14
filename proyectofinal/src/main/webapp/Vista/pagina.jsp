@@ -15,7 +15,7 @@
 
             <div class="menu container ">
 
-                <a href="pagina.html" class="logo"> THEGC
+                <a href="pagina.jsp" class="logo"> THEGC
                     <img src="imagen/navaja.png">
                 </a>
                 <input type="checkbox" id="menu" />
@@ -24,13 +24,13 @@
 
                 <nav class="navbar">
                     <ul>
-                        <li><a href="pagina.html">Inicio
+                        <li><a href="pagina.jsp">Inicio
                                 <img src="imagen/casa.png">
                             </a></li>
-                        <li><a href="mis_clientes.html">Mis Clientes
+                        <li><a href="mis_clientes.jsp">Mis Clientes
                                 <img src="imagen/clientes.png">
                             </a></li>
-                        <li><a href="mis_citas.html">Mis Citas
+                        <li><a href="mis_citas.jsp">Mis Citas
                                 <img src="imagen/calendario.png">
                             </a></li>
                     </ul>
