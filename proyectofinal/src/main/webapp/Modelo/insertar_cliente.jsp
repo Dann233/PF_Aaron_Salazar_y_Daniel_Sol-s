@@ -14,7 +14,8 @@ String nombreUsuario = "root";
 String nombreClave = "Proverbios18.22";  
 
 Connection conn = null;
-PreparedStatement stmt = null;
+CallableStatement  stmt = null;
+String mensaje = ""; 
 
 try {
     Class.forName("com.mysql.cj.jdbc.Driver");
@@ -31,11 +32,12 @@ try {
     int filaInsertada = stmt.executeUpdate();
 
     if (filaInsertada > 0) {
-        request.setAttribute("mensaje", "El paciente se ha eliminado correctamente!");
+        mensaje = "El cliente se agrego correctamente";
         response.sendRedirect("../Vista/mis_clientes.jsp");
 
    
     } else {
+        mensaje = "Hubo un error al agregar el cliente";
        
     }
 } catch (SQLException e) {

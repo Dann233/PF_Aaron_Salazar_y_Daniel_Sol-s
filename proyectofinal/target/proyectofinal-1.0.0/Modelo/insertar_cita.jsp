@@ -13,7 +13,7 @@ String nombreUsuario = "root";
 String nombreClave = "Proverbios18.22";  
 
 Connection conn = null;
-PreparedStatement stmt = null;
+CallableStatement stmt = null;
 String mensaje = ""; 
 
 try {

@@ -42,8 +42,18 @@
         </header>
 
         <section class="search-form container">
-            <form id="form-cita" method="POST" action="../Modelo/insertar_cita.jsp">
-                <label for="cedula" class="form-label">Seleccione Cédula</label>
+            <form id="form-cita" method="POST">
+                <label for="id_cita"></label>
+                <div class="input-group">
+                    <input type="text" id="id_cita" placeholder="Digite el número de cita a buscar">
+                    <button class="btn-buscar">
+                        <img src='/Vista/imagen/buscar(1).png' alt="Buscar"
+                            style="height: 24px; vertical-align: middle;">
+                    </button>
+                </div>
+
+
+                <label for="cedula" class="form-label"></label>
                 <div class="input-group">
                     <jsp:include page="../Modelo/cargar_cedulas.jsp" />
                     <button class="btn-buscar">
@@ -53,16 +63,18 @@
 
 
                 <label for="fecha-cita" class="form-label">Fecha de Cita</label>
-                <input type="date" id="fecha-cita" name="fecha-cita" placeholder="Fecha de la Cita" aria-label="Fecha de la Cita">
+                <input type="date" id="fecha-cita" name="fecha-cita" placeholder="Fecha de la Cita"
+                    aria-label="Fecha de la Cita">
 
 
                 <label for="hora-cita" class="form-label">Hora de Cita</label>
-                <input type="time" id="hora-cita" name="hora-cita" placeholder="Hora de la Cita" aria-label="Hora de la Cita">
+                <input type="time" id="hora-cita" name="hora-cita" placeholder="Hora de la Cita"
+                    aria-label="Hora de la Cita">
 
                 <div class="action-buttons">
-                    <button class="btn-editar">Editar</button>
+                    <button class="btn-actualizar">Editar</button>
                     <button class="btn-eliminar">Eliminar</button>
-                    <button type="submit"><i class="fas fa-plus"></i>Agregar</button>
+                    <button class="btn-agregar">Agregar</button>
                 </div>
             </form>
         </section>

@@ -45,8 +45,8 @@
             <form id="form_cliente" method="POST">
 
                 <input type="text" placeholder="Digite la Cédula a buscar" id="cedula_buscada" name="cedula_buscada">
-                <button class="btn-buscar" type="button" onclick="buscarCliente()">
-                    <img src='imagen/buscar(1).png' alt="Buscar" style="height: 24px; vertical-align: middle;">
+                <button class="btn-buscar" type="button" id="btn-buscar" name="btn-buscar">
+                    <img src='imagen/buscar(1).png' alt="Buscar" style="height: 24px; vertical-align: right inherit;">
                 </button>
 
                 <input type="text" placeholder="Cédula" id="cedula" name="cedula" required>
@@ -56,10 +56,9 @@
                 <input type="text" placeholder="Segundo Apellido" id="apellido2" name="apellido2">
 
                 <div class="action-buttons">
-                    <button type="button" onclick="closeModal()">Cancelar</button>
-                    <button type="button" onclick="submitForm('insertar')">Agregar</button>
-                    <button type="button" onclick="submitForm('actualizar')">Actualizar</button>
-                    <button type="button" onclick="submitForm('eliminar')">Eliminar</button>
+                    <button name="btn-agregar" id="btn-agregar" class="btn-agregar" type="button">Agregar</button>
+                    <button name="btn-actualizar" id="btn-actualizar" class="btn-actualizar" type="button">Actualizar</button>
+                    <button name="btn-eliminar" id="btn-eliminar" class="btn-eliminar" type="button" >Eliminar</button>
                 </div>
             </form>
         </section>

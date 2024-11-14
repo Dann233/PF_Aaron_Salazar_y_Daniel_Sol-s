@@ -458,7 +458,7 @@ input{
     margin-top: 20px; /* Ajusta según sea necesario */
 }
 
-.btn-editar {
+.btn-actualizar {
     background-color: #28A745; /* Verde para el botón de Editar */
     color: #FFFFFF;
     padding: 10px 20px;
@@ -534,7 +534,7 @@ header .menu ul li a:hover {
     margin-top: 15px;
 }
 
-.btn-editar {
+.btn-actualizar {
     background-color: #007BFF;
     color: #FFFFFF;
     padding: 10px 20px;
@@ -646,10 +646,10 @@ header .menu ul li a:hover {
     margin-right: 10px; 
 }
 
-.btn-editar {
+.btn-actualizar {
     background-color: #007BFF;
     color: #FFFFFF;
-    background-image: url('/Vista/imagen/edicion.png'); /* Ruta de la imagen */
+    background-image: url('imagen/edicion.png'); /* Ruta de la imagen */
     background-repeat: no-repeat;
     background-position: right center; /* Posiciona la imagen a la izquierda */
     padding-left: 5px;
@@ -658,7 +658,7 @@ header .menu ul li a:hover {
 .btn-eliminar {
     background-color: #F56349;
     color: #FFFFFF;
-    background-image: url('/Vista/imagen/borrar.png'); /* Ruta de la imagen */
+    background-image: url('imagen/borrar.png'); /* Ruta de la imagen */
     background-repeat: no-repeat;
     background-position: right center; /* Posiciona la imagen a la izquierda */
     padding-left: 5px;
@@ -667,7 +667,7 @@ header .menu ul li a:hover {
 .btn-agregar {
     background-color: #17A2B8;
     color: #FFFFFF;
-    background-image: url('/Vista/imagen/nuevo.png'); /* Ruta de la imagen */
+    background-image: url('imagen/nuevo.png'); /* Ruta de la imagen */
     background-repeat: no-repeat;
     background-position: right center; /* Posiciona la imagen a la izquierda */
     padding-left: 5px;
@@ -731,7 +731,7 @@ header .menu ul li a:hover {
     border-radius: 5px;
 }
 
-.btn-editar {
+.btn-actualizar {
     background-color: #007BFF;
     color: #FFFFFF;
 }
@@ -804,7 +804,7 @@ header .menu ul li a:hover {
     border-radius: 5px;
 }
 
-.btn-editar {
+.btn-actualizar {
     background-color: #007BFF;
     color: #FFFFFF;
 }
@@ -877,7 +877,7 @@ header .menu ul li a:hover {
     border-radius: 5px;
 }
 
-.btn-editar {
+.btn-actualizar {
     background-color: #007BFF;
     color: #FFFFFF;
 }
@@ -1015,7 +1015,7 @@ header .menu ul li a:hover {
     border-radius: 5px;
 }
 
-.btn-editar {
+.btn-actualizar {
     background-color: #007BFF;
     color: #FFFFFF;
 }
