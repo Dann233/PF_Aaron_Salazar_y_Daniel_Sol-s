@@ -73,7 +73,7 @@
 
 
 
-        <script src="../Controlador/menu.js"></script>
+        <script src="../Controlador/mis_clientes.js"></script>
 
     </body>
 

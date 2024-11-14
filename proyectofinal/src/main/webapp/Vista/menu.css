@@ -1029,3 +1029,34 @@ header .menu ul li a:hover {
     background-color: #17A2B8;
     color: #FFFFFF;
 }
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-group input, .input-group select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 16px;
+    height: auto;
+}
+
+.btn-buscar {
+    background-color: #28A745; 
+    color: #FFFFFF;
+    padding:  0;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px; 
+    height: 100%; 
+    aspect-ratio: 1;
+    margin-top: -20px;
+}

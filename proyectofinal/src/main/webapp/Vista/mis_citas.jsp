@@ -42,12 +42,12 @@
         </header>
 
         <section class="search-form container">
-            <form id="form-cita" method="POST">
+            <form id="form_cita" method="POST">
                 <label for="id_cita"></label>
                 <div class="input-group">
-                    <input type="text" id="id_cita" placeholder="Digite el número de cita a buscar">
-                    <button class="btn-buscar">
-                        <img src='/Vista/imagen/buscar(1).png' alt="Buscar"
+                    <input type="text" id="id_cita" name="id_cita" placeholder="Digite el número de cita a buscar">
+                    <button name="btn-buscar" id="btn-buscar" class="btn-buscar" type="button" >Buscar</button>
+                        <img src='imagen/buscar(1).png' alt="Buscar"
                             style="height: 24px; vertical-align: middle;">
                     </button>
                 </div>
@@ -56,7 +56,7 @@
                 <label for="cedula" class="form-label"></label>
                 <div class="input-group">
                     <jsp:include page="../Modelo/cargar_cedulas.jsp" />
-                    <button class="btn-buscar">
+                    <button name="btn-buscar" id="btn-buscar" class="btn-buscar" type="button" >Buscar</button>
                         <img src='imagen/buscar(1).png' alt="Buscar" style="height: 24px; vertical-align: middle;">
                     </button>
                 </div>
@@ -72,9 +72,9 @@
                     aria-label="Hora de la Cita">
 
                 <div class="action-buttons">
-                    <button class="btn-actualizar">Editar</button>
-                    <button class="btn-eliminar">Eliminar</button>
-                    <button class="btn-agregar">Agregar</button>
+                    <button name="btn-agregar" id="btn-agregar" class="btn-agregar" type="button">Agregar</button>
+                    <button name="btn-actualizar" id="btn-actualizar" class="btn-actualizar" type="button">Actualizar</button>
+                    <button name="btn-eliminar" id="btn-eliminar" class="btn-eliminar" type="button" >Eliminar</button>
                 </div>
             </form>
         </section>
@@ -83,7 +83,7 @@
             <jsp:include page="../Modelo/seleccionar_cita.jsp" />
         </section>
 
-        <script src="../Controlador/menu.js"></script>
+        <script src="../Controlador/mis_citas.js"></script>
 
     </body>
 

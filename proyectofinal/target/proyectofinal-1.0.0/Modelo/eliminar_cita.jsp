@@ -3,7 +3,7 @@
 <%@ page import="java.net.URLEncoder" %>
 <% 
 //Por medio de la cedula buscada, al presionar el boton de eliminar, se envia a este archivo y se ejecuta la sentencia SQL
-String entrada_idcita = request.getParameter("idcita");
+String entrada_idcita = request.getParameter("id_cita");
 
 
 String URL = "jdbc:mysql://localhost:3306/barberia_solissalazar?useUnicode=true&characterEncoding=utf8";
@@ -53,5 +53,4 @@ try {
     }
 }
 
-response.sendRedirect("../Vista/mis_citas.jsp?mensaje=" + URLEncoder.encode(mensaje, "UTF-8"));
 %>

@@ -32,15 +32,12 @@ try {
     int filaActualizada = pstmt.executeUpdate();
 
     if (filaActualizada > 0) {
-        mensaje = "Se ha actualizado la informacion del cliente con exito";
-        request.setAttribute("mensaje", mensaje);  // Guardamos el mensaje en la solicitud
-        request.getRequestDispatcher("../Vista/mis_clientes.jsp").forward(request, response);  
-    } else {
-        mensaje = "No se ha podido actualizar la informacion del cliente";
+        mensaje = "El cliente se ha actualizado correctamente";
         request.setAttribute("mensaje", mensaje);
-        request.getRequestDispatcher("../Vista/mis_clientes.jsp").forward(request, response);
+        response.sendRedirect("../Vista/mis_clientes.jsp");
+    } else {
+        mensaje = "Hubo un error al eliminar el cliente";
     }
-    
 } catch (SQLException e) {
     request.setAttribute("mensaje", "Error en la Base de Datos");
     e.printStackTrace();

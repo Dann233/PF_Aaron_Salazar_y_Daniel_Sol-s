@@ -29,6 +29,7 @@ try {
 
     if (filaInsertada > 0) {
         mensaje = "La cita fue agendada correctamente!";
+        response.sendRedirect("../Vista/mis_citas.jsp");
     } else {
         mensaje = "Hubo un error al agendar la cita.";
     }
@@ -55,6 +56,5 @@ try {
         }
     }
 
-    response.sendRedirect("../Vista/mis_citas.jsp?mensaje=" + URLEncoder.encode(mensaje, "UTF-8"));
 
 %>

@@ -190,13 +190,6 @@
 
         </form>
 
-        </table>
-
-
-
-
-        <script src="/proyectofinal/src/main/webapp/Controlador/menu.js"></script>
-
     </body>
 
     </html>
