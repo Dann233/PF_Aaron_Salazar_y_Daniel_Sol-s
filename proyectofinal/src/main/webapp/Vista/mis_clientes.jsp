@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
     <!DOCTYPE html>
     <html lang="es">
 
@@ -42,32 +42,39 @@
         </header>
 
         <section class="search-form container">
-            <form id="form_cliente" method="POST" action="../Modelo/insertar_cliente.jsp">
-            <input type="text" placeholder="Digite la Cédula a buscar">
-            <button class="btn-buscar" type="submit">
-                <img src='imagen/buscar(1).png' alt="Buscar"
-                    style="height: 24px; vertical-align: middle;">
-            </button>
-            <input type="text" placeholder="Cédula" id="cedula" name="cedula" required>
-            <input type="text" placeholder="Primer Nombre" id="nombre1" name="nombre1" required>
-            <input type="text" placeholder="Segundo Nombre" id="nombre2" name="nombre2">
-            <input type="text" placeholder="Primer Apellido " id="apellido1" name="apellido1" required>
-            <input type="text" placeholder="Segundo Apellido" id="apellido2" name="apellido2">
+            <form id="form_cliente" method="POST">
 
-            <div class="action-buttons">
-                <button type="button" onclick="closeModal()">Cancelar</button>
-                <button type="submit"><i class="fas fa-plus"></i>Agregar</button>
-                <button type="button" onclick="btns_clientes('proyectofinal/src/main/webapp/Modelo/actualizar_cliente.jsp')">Actualizar</button>
-                <button type="button" onclick="btns_clientes('Modelo/eliminar_cliente.jsp')">Eliminar</button>
-            </div>
-        </form>
+                <input type="text" placeholder="Digite la Cédula a buscar" id="cedula_buscada" name="cedula_buscada">
+                <button class="btn-buscar" type="button" onclick="buscarCliente()">
+                    <img src='imagen/buscar(1).png' alt="Buscar" style="height: 24px; vertical-align: middle;">
+                </button>
+
+                <input type="text" placeholder="Cédula" id="cedula" name="cedula" required>
+                <input type="text" placeholder="Primer Nombre" id="nombre1" name="nombre1" required>
+                <input type="text" placeholder="Segundo Nombre" id="nombre2" name="nombre2">
+                <input type="text" placeholder="Primer Apellido " id="apellido1" name="apellido1" required>
+                <input type="text" placeholder="Segundo Apellido" id="apellido2" name="apellido2">
+
+                <div class="action-buttons">
+                    <button type="button" onclick="closeModal()">Cancelar</button>
+                    <button type="button" onclick="submitForm('insertar')">Agregar</button>
+                    <button type="button" onclick="submitForm('actualizar')">Actualizar</button>
+                    <button type="button" onclick="submitForm('eliminar')">Eliminar</button>
+                </div>
+            </form>
         </section>
 
         <section class="table-section container">
-            <jsp:include page="../Modelo/seleccionar_cliente.jsp" />
+            <table>
+                <tbody id="tabla-clientes">
+                    <jsp:include page="../Modelo/seleccionar_cliente.jsp" />
+                </tbody>
+            </table>
         </section>
 
-        <script src="/proyectofinal/src/main/webapp/Controlador/menu.js"></script>
+
+
+        <script src="../Controlador/menu.js"></script>
 
     </body>
 

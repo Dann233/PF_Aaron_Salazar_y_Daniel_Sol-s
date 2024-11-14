@@ -45,12 +45,7 @@
             <form id="form-cita" method="POST" action="../Modelo/insertar_cita.jsp">
                 <label for="cedula" class="form-label">Seleccione Cédula</label>
                 <div class="input-group">
-                    <select id="cedula" name="cedula" aria-label="Seleccione la Cédula">
-                        <option value="">Seleccione la Cédula</option>
-                        <option value="cedula1">Cédula 1</option>
-                        <option value="cedula2">Cédula 2</option>
-                        <option value="cedula3">Cédula 3</option>
-                    </select>
+                    <jsp:include page="../Modelo/cargar_cedulas.jsp" />
                     <button class="btn-buscar">
                         <img src='imagen/buscar(1).png' alt="Buscar" style="height: 24px; vertical-align: middle;">
                     </button>
@@ -76,7 +71,7 @@
             <jsp:include page="../Modelo/seleccionar_cita.jsp" />
         </section>
 
-        <script src="Controlador/menu.js"></script>
+        <script src="../Controlador/menu.js"></script>
 
     </body>
 

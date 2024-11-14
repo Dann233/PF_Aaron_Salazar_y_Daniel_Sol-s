@@ -1,17 +1,17 @@
 // Abrir modal "Registrar Cita"
-document.querySelector('.navbar ul li:nth-child(1) a').addEventListener('click', function(e) {
+document.querySelector('.navbar ul li:nth-child(1) a').addEventListener('click', function (e) {
     e.preventDefault();
     //document.getElementById('modal').style.display = 'flex';
 });
 
 // Redirigir a ProcesosClientes.html al hacer clic en "Buscar Cita"
-document.querySelector('.navbar ul li:nth-child(2) a').addEventListener('click', function(e) {
+document.querySelector('.navbar ul li:nth-child(2) a').addEventListener('click', function (e) {
     e.preventDefault();
     window.location.href = 'ProcesosCliente.html';
 });
 
 // Abrir modal "Mis Citas"
-document.querySelector('.navbar ul li:nth-child(3) a').addEventListener('click', function(e) {
+document.querySelector('.navbar ul li:nth-child(3) a').addEventListener('click', function (e) {
     e.preventDefault();
     //document.getElementById('modalMisCitas').style.display = 'flex';
 });
@@ -64,7 +64,45 @@ function closeModal() {
     document.getElementById('modal').style.display = 'none';
 }
 
-function btns_clientes(actionUrl){
-    document.getElementById('action-buttons').action = actionUrl;
-    document.getElementById('action-buttons').submit();
+function submitForm(actionType) {
+    const form = document.getElementById('form_cliente');
+
+    
+    switch (actionType) {
+        case 'insertar':
+            form.action = '../Modelo/insertar_cliente.jsp';
+            break;
+        case 'actualizar':
+            form.action = '../Modelo/actualizar_cliente.jsp';
+            break;
+        case 'eliminar':
+            form.action = '../Modelo/eliminar_cliente.jsp';
+            break;
+    }
+
+    
+    form.submit();
 }
+
+function buscarCliente() {
+    var cedula = document.getElementById("cedula_buscada").value;
+    if (!cedula) {
+        alert("Por favor, ingrese una cédula para buscar.");
+        return;
+    }
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "../Modelo/buscar_cliente.jsp?cedula_buscada=" + encodeURIComponent(cedula), true);
+    
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+           
+            document.getElementById("tabla-clientes").innerHTML = xhr.responseText;
+        }
+    };
+
+    xhr.send(); 
+}
+
+
+document.querySelector(".btn-buscar").addEventListener("click", buscarCliente);
