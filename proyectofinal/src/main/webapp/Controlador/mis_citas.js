@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
+    const buscarBtn_id = document.getElementById('btn-buscar-id');
     const buscarBtn = document.getElementById('btn-buscar');
     const editarBtn = document.getElementById('btn-actualizar');
     const eliminarBtn = document.getElementById('btn-eliminar');
     const agregarBtn = document.getElementById('btn-agregar');
 
-    buscarBtn.addEventListener('click', function () {
+    buscarBtn_id.addEventListener('click', function () {
         const idbuscada = document.getElementById('id_cita').value.trim();
         if (idbuscada === '') {
             alert('Por favor, ingrese un número de cita para buscar.');
@@ -33,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
     });
 
-    // Eventos para actualizar, eliminar y agregar
+    
     editarBtn.addEventListener('click', function (event) {
         const form_cita = document.getElementById('form_cita');
         if (!validarCampos(form_cita)) {

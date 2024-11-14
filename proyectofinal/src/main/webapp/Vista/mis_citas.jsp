@@ -46,7 +46,7 @@
                 <label for="id_cita"></label>
                 <div class="input-group">
                     <input type="text" id="id_cita" name="id_cita" placeholder="Digite el número de cita a buscar">
-                    <button name="btn-buscar" id="btn-buscar" class="btn-buscar" type="button" >Buscar</button>
+                    <button name="btn-buscar-id" id="btn-buscar-id" class="btn-buscar-id" type="button" >Buscar</button>
                         <img src='imagen/buscar(1).png' alt="Buscar"
                             style="height: 24px; vertical-align: middle;">
                     </button>

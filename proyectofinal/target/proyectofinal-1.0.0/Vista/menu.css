@@ -798,6 +798,19 @@ header .menu ul li a:hover {
     justify-content: center;
 }
 
+.search-form .btn-buscar-id {
+    background-color: #28A745;
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    width: 50px; /* Ajusta el ancho del botón de buscar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .action-buttons {
     display: flex;
     justify-content: space-around;
