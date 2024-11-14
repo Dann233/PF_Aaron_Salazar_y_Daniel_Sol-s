@@ -15,7 +15,7 @@
 
             <div class="menu container ">
 
-                <a href="menu.jsp" class="logo"> THEGC
+                <a href="pagina.jsp" class="logo"> THEGC
                     <img src="<%= request.getContextPath() %>/Vista/imagen/navaja.png">
                 </a>
                 <input type="checkbox" id="menu" />
@@ -24,7 +24,7 @@
 
                 <nav class="navbar">
                     <ul>
-                        <li><a href="menu.jsp">Inicio
+                        <li><a href="pagina.jsp">Inicio
                                 <img src="<%= request.getContextPath() %>/Vista/imagen/casa.png">
                             </a></li>
                         <li><a href="mis_clientes.jsp">Mis Clientes

@@ -1,19 +1,18 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-    <!DOCTYPE html>
+<!DOCTYPE html>
     <html lang="es">
 
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Mis Citas</title>
-        <link rel="stylesheet" href="Vista/menu.css">
+        <link rel="stylesheet" href="menu.css">
     </head>
 
     <body>
         <header class="header">
             <div class="menu container">
-                <a href="pagina.jsp" class="logo"> THEGC
-                    <img src="<%= request.getContextPath() %>/Vista/imagen/navaja.png" alt="">
+                <a href="pagina.html" class="logo"> THEGC
+                    <img src="imagen/navaja.png" alt="">
                 </a>
 
                 <input type="checkbox" id="menu" />
@@ -21,14 +20,14 @@
 
                 <nav class="navbar">
                     <ul>
-                        <li><a href="pagina.jsp">Inicio
-                                <img src="<%= request.getContextPath() %>/Vista/imagen/casa.png" alt="">
+                        <li><a href="pagina.html">Inicio
+                                <img src="imagen/casa.png" alt="">
                             </a></li>
-                        <li><a href="mis_clientes.jsp">Mis Clientes
-                                <img src="<%= request.getContextPath() %>/Vista/imagen/clientes.png" alt="">
+                        <li><a href="mis_clientes.html">Mis Clientes
+                                <img src="imagen/clientes.png" alt="">
                             </a></li>
-                        <li><a href="mis_citas.jsp">Mis Citas
-                                <img src="<%= request.getContextPath() %>/Vista/imagen/calendario.png" alt="">
+                        <li><a href="mis_citas.html">Mis Citas
+                                <img src="imagen/calendario.png" alt="">
                             </a></li>
                     </ul>
                 </nav>
@@ -51,7 +50,7 @@
                     <option value="cedula3">Cédula 3</option>
                 </select>
                 <button class="btn-buscar">
-                    <img src='<%= request.getContextPath() %>/Vista/imagen/buscar(1).png' alt="Buscar"
+                    <img src='imagen/buscar(1).png' alt="Buscar"
                         style="height: 24px; vertical-align: middle;">
                 </button>
             </div>

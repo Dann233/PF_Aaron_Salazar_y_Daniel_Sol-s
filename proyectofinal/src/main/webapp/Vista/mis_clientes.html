@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
     <!DOCTYPE html>
     <html lang="es">
 
@@ -6,14 +6,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Mis Clientes</title>
-        <link rel="stylesheet" href="Vista/menu.css">
+        <link rel="stylesheet" href="menu.css">
     </head>
 
     <body>
         <header class="header">
             <div class="menu container">
-                <a href="pagina.jsp" class="logo"> THEGC
-                    <img src="<%= request.getContextPath() %>/Vista/imagen/navaja.png" alt="">
+                <a href="pagina.html" class="logo"> THEGC
+                    <img src="imagen/navaja.png" alt="">
                 </a>
 
                 <input type="checkbox" id="menu" />
@@ -21,14 +21,14 @@
 
                 <nav class="navbar">
                     <ul>
-                        <li><a href="pagina.jsp">Inicio
-                                <img src="<%= request.getContextPath() %>/Vista/imagen/casa.png" alt="">
+                        <li><a href="pagina.html">Inicio
+                                <img src="imagen/casa.png" alt="">
                             </a></li>
-                        <li><a href="mis_clientes.jsp">Mis Clientes
-                                <img src="<%= request.getContextPath() %>/Vista/imagen/clientes.png" alt="">
+                        <li><a href="mis_clientes.html">Mis Clientes
+                                <img src="imagen/clientes.png" alt="">
                             </a></li>
-                        <li><a href="mis_citas.jsp">Mis Citas
-                                <img src="<%= request.getContextPath() %>/Vista/imagen/calendario.png" alt="">
+                        <li><a href="mis_citas.html">Mis Citas
+                                <img src="imagen/calendario.png" alt="">
                             </a></li>
                     </ul>
                 </nav>
@@ -42,29 +42,25 @@
         </header>
 
         <section class="search-form container">
+            <form id="form_cliente" method="POST" action="Modelo/insertar_cliente.jsp">
             <input type="text" placeholder="Digite la Cédula a buscar">
-            <button class="btn-buscar">
-                <img src='<%= request.getContextPath() %>/Vista/imagen/buscar(1).png' alt="Buscar"
+            <button class="btn-buscar" type="submit">
+                <img src='imagen/buscar(1).png' alt="Buscar"
                     style="height: 24px; vertical-align: middle;">
             </button>
-
-
-
-            <input type="text" placeholder="Cédula">
-            <input type="text" placeholder="Primer Nombre">
-            <input type="text" placeholder="Segundo Nombre">
-            <input type="text" placeholder="Primer Apellido ">
-            <input type="text" placeholder="Segundo Apellido">
-
-
-
-
+            <input type="text" placeholder="Cédula" id="cedula" name="cedula" required>
+            <input type="text" placeholder="Primer Nombre" id="nombre1" name="nombre1" required>
+            <input type="text" placeholder="Segundo Nombre" id="nombre2" name="nombre2">
+            <input type="text" placeholder="Primer Apellido " id="apellido1" name="apellido1" required>
+            <input type="text" placeholder="Segundo Apellido" id="apellido2" name="apellido2">
 
             <div class="action-buttons">
-                <button class="btn-editar">Editar</button>
-                <button class="btn-eliminar">Eliminar</button>
-                <button class="btn-agregar">Agregar</button>
+                <button type="button" onclick="closeModal()">Cancelar</button>
+                <button type="submit"><i class="fas fa-plus"></i>Agregar</button>
+                <button type="button" onclick="btns_clientes('Modelo/actualizar_cliente.jsp')">Actualizar</button>
+                <button type="button" onclick="btns_clientes('Modelo/eliminar_cliente.jsp')">Eliminar</button>
             </div>
+        </form>
         </section>
 
         <section class="table-section container">

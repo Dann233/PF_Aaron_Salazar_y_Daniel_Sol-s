@@ -64,7 +64,7 @@ function closeModal() {
     document.getElementById('modal').style.display = 'none';
 }
 
-function submitForm(actionUrl){
-    document.getElementById('form-clientes').action = actionUrl;
-    document.getElementById('form-clientes').submit();
+function btns_clientes(actionUrl){
+    document.getElementById('action-buttons').action = actionUrl;
+    document.getElementById('action-buttons').submit();
 }

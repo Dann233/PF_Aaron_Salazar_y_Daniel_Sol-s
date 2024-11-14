@@ -55,7 +55,7 @@ de MySQL-->
                         if (rs.next()) {
                             String nombreUsuario = rs.getString("usuario");
                             session.setAttribute("mensajeBienvenida", "¡Bienvenido, " + nombreUsuario + "!");
-                            response.sendRedirect("menu.jsp");
+                            response.sendRedirect("Vista/pagina.html");
                         } else {
         %>
         <div class="alert alert-danger" role="alert">
