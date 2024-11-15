@@ -20,7 +20,7 @@
                         <h2>Inicio Sesión</h2>
                     </div>
 
-                    <form id="form_login" method="POST" action="Modelo/login.jsp">
+                    <form method="POST" action="Modelo/login.jsp">
                         <div class="input-box">
                             <input type="text" class="input-field" id="usuario" name="usuario" placeholder="Usuario"
                                 autocomplete="off" required>
@@ -38,9 +38,6 @@
 
                 </div>
             </div>
-
-            <script src="Controlador/login.js"></script>
-
            
         </body>
 

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const buscarBtn_id = document.getElementById('btn-buscar-id');
+    const buscarBtn_id = document.getElementById('btn-buscar');
     const editarBtn = document.getElementById('btn-actualizar');
     const eliminarBtn = document.getElementById('btn-eliminar');
     const agregarBtn = document.getElementById('btn-agregar');
