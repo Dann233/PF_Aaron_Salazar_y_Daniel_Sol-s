@@ -534,7 +534,7 @@ header .menu ul li a:hover {
     margin-top: 15px;
 }
 
-.btn-editar {
+.btn-actualizar {
     background-color: #007BFF;
     color: #FFFFFF;
     padding: 10px 20px;
@@ -646,7 +646,7 @@ header .menu ul li a:hover {
     margin-right: 10px; 
 }
 
-.btn-editar {
+.btn-actualizar {
     background-color: #007BFF;
     color: #FFFFFF;
     background-image: url('imagen/edicion.png'); /* Ruta de la imagen */
@@ -731,7 +731,7 @@ header .menu ul li a:hover {
     border-radius: 5px;
 }
 
-.btn-editar {
+.btn-actualizar {
     background-color: #007BFF;
     color: #FFFFFF;
 }
@@ -804,7 +804,7 @@ header .menu ul li a:hover {
     border-radius: 5px;
 }
 
-.btn-editar {
+.btn-actualizar {
     background-color: #007BFF;
     color: #FFFFFF;
 }
@@ -877,7 +877,7 @@ header .menu ul li a:hover {
     border-radius: 5px;
 }
 
-.btn-editar {
+.btn-actualizar {
     background-color: #007BFF;
     color: #FFFFFF;
 }
@@ -1015,7 +1015,7 @@ header .menu ul li a:hover {
     border-radius: 5px;
 }
 
-.btn-editar {
+.btn-actualizar {
     background-color: #007BFF;
     color: #FFFFFF;
 }

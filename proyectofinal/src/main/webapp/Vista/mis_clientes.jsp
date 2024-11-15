@@ -47,7 +47,7 @@
 
             <section class="search-form container">
                 <form id="form_cliente" method="POST">
-
+                    
 
                     <div class="input-group">
                         <input type="text" placeholder="Digite la Cédula a buscar" id="cedula_buscada"
