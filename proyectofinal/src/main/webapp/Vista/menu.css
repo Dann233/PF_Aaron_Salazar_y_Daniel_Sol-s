@@ -1068,3 +1068,12 @@ header .menu ul li a:hover {
     aspect-ratio: 1;
     margin-top: -20px;
 }
+
+#mensajeInformativo {
+    background-color: #dff0d8;
+    color: #3c763d;
+    padding: 10px;
+    border: 1px solid #d6e9c6;
+    border-radius: 4px;
+    margin-top: 10px;
+}

@@ -46,9 +46,9 @@
                 <label for="id_cita"></label>
                 <div class="input-group">
                     <input type="text" id="id_cita" name="id_cita" placeholder="Digite el número de cita a buscar">
-                    <button name="btn-buscar-id" id="btn-buscar-id" class="btn-buscar-id" type="button" >Buscar</button>
+                    <button name="btn-buscar-id" id="btn-buscar-id" class="btn-buscar-id" type="button" title="Buscar Cita"></button>
                         <img src='imagen/buscar(1).png' alt="Buscar"
-                            style="height: 24px; vertical-align: middle;">
+                            style="height: 20px; vertical-align: middle;">
                     </button>
                 </div>
 
@@ -56,8 +56,6 @@
                 <label for="cedula" class="form-label"></label>
                 <div class="input-group">
                     <jsp:include page="../Modelo/cargar_cedulas.jsp" />
-                    <button name="btn-buscar" id="btn-buscar" class="btn-buscar" type="button" >Buscar</button>
-                        <img src='imagen/buscar(1).png' alt="Buscar" style="height: 24px; vertical-align: middle;">
                     </button>
                 </div>
 
@@ -72,9 +70,9 @@
                     aria-label="Hora de la Cita">
 
                 <div class="action-buttons">
-                    <button name="btn-agregar" id="btn-agregar" class="btn-agregar" type="button">Agregar</button>
-                    <button name="btn-actualizar" id="btn-actualizar" class="btn-actualizar" type="button">Actualizar</button>
-                    <button name="btn-eliminar" id="btn-eliminar" class="btn-eliminar" type="button" >Eliminar</button>
+                    <button name="btn-agregar" id="btn-agregar" class="btn-agregar" type="button" title="Agendar Cita">Agendar</button>
+                    <button name="btn-actualizar" id="btn-actualizar" class="btn-actualizar" type="button" title="Editar informacion de la cita">Editar</button>
+                    <button name="btn-eliminar" id="btn-eliminar" class="btn-eliminar" type="button" title="Borrar Cita">Borrar</button>
                 </div>
             </form>
         </section>

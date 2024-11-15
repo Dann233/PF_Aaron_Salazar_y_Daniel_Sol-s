@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const eliminarBtn = document.getElementById('btn-eliminar');
     const agregarBtn = document.getElementById('btn-agregar');
 
-   
+
     buscarBtn.addEventListener('click', function () {
         const cedulaBuscada = document.getElementById('cedula_buscada').value.trim();
         if (cedulaBuscada === '') {
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
             })
             .then(data => {
                 if (data) {
-                   
+
                     const form_cliente = document.getElementById('form_cliente');
                     form_cliente.querySelector('#cedula').value = data.cedula;
                     form_cliente.querySelector('#nombre1').value = data.nombre1;
@@ -46,7 +46,8 @@ document.addEventListener('DOMContentLoaded', function () {
             alert('Por favor, llene todos los campos antes de editar.');
             event.preventDefault();
         } else {
-            console.log('Campos válidos, enviando formulario');
+            sessionStorage.setItem('mensaje', 'Cliente agregado correctamente.');
+            sessionStorage.setItem('tipo', 'exito');
             form_cliente.action = '../Modelo/actualizar_cliente.jsp';
             form_cliente.submit();
         }
@@ -54,17 +55,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Evento de eliminación
     eliminarBtn.addEventListener('click', function (event) {
-            const cedulaBuscada = document.getElementById('cedula_buscada').value.trim();
-            if (cedulaBuscada === '') {
-                alert('Por favor, ingrese una cédula para eliminar.');
-                event.preventDefault();
-                return;
-            }
-            const form_cliente = document.getElementById('form_cliente');
+        const cedulaBuscada = document.getElementById('cedula_buscada').value.trim();
+        if (cedulaBuscada === '') {
+            alert('Por favor, ingrese una cédula para eliminar.');
+            event.preventDefault();
+            return;
+        }else {
+            sessionStorage.setItem('mensaje', 'Cliente agregado correctamente.');
+            sessionStorage.setItem('tipo', 'exito');
             form_cliente.action = '../Modelo/eliminar_cliente.jsp';
             form_cliente.submit();
-        });
-    
+        }
+    });
+
 
     // Evento de agregar
     agregarBtn.addEventListener('click', function (event) {
@@ -76,10 +79,13 @@ document.addEventListener('DOMContentLoaded', function () {
             event.preventDefault();
         } else {
             console.log('Campos válidos, enviando formulario');
+            sessionStorage.setItem('mensaje', 'Cliente agregado correctamente.');
+            sessionStorage.setItem('tipo', 'exito');
             form_cliente.action = '../Modelo/insertar_cliente.jsp';
             form_cliente.submit();
         }
     });
+    
 
     function validarCampos(formulario) {
         const cedula = formulario.querySelector('#cedula').value.trim();
@@ -88,3 +94,23 @@ document.addEventListener('DOMContentLoaded', function () {
         return cedula !== '' && nombre1 !== '' && apellido1 !== '';
     }
 });
+
+function mostrarMensaje(mensaje, tipo) {
+    const mensajeElemento = document.getElementById('mensajeInformativo');
+    mensajeElemento.textContent = mensaje;
+    mensajeElemento.style.display = 'block';
+
+
+    if (tipo === 'exito') {
+        mensajeElemento.style.backgroundColor = '#dff0d8';
+        mensajeElemento.style.color = '#3c763d';
+    } else if (tipo === 'error') {
+        mensajeElemento.style.backgroundColor = '#f2dede';
+        mensajeElemento.style.color = '#a94442';
+    }
+
+
+    setTimeout(function () {
+        mensajeElemento.style.display = 'none';
+    }, 5000);
+}

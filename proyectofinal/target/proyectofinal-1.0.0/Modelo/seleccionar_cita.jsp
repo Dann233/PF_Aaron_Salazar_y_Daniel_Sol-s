@@ -17,7 +17,7 @@
 <table>
     <thead>
         <tr>
-            <th>ID</th>
+            <th>Número Cita</th>
             <th>Cédula</th>
             <th>Fecha</th>
             <th>Hora</th>

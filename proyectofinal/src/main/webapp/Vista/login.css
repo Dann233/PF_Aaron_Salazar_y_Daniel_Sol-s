@@ -149,3 +149,19 @@ margin-top: 20px;
     width: 100%; 
     max-width: 400px; 
 }
+
+.alert {
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+}

@@ -15,7 +15,7 @@
 
             <div class="menu container ">
 
-                <a href="pagina.jsp" class="logo"> THEGC
+                <a href="pagina.jsp" title="Ir a Pagina Principal" class="logo"> THEGC
                     <img src="imagen/navaja.png">
                 </a>
                 <input type="checkbox" id="menu" />
@@ -24,13 +24,13 @@
 
                 <nav class="navbar">
                     <ul>
-                        <li><a href="pagina.jsp">Inicio
+                        <li><a href="pagina.jsp" title="Ir a Pagina Principal">Inicio
                                 <img src="imagen/casa.png">
                             </a></li>
-                        <li><a href="mis_clientes.jsp">Mis Clientes
+                        <li><a href="mis_clientes.jsp" title="Ir al mantenimiento de la tabla Clientes">Mis Clientes
                                 <img src="imagen/clientes.png">
                             </a></li>
-                        <li><a href="mis_citas.jsp">Mis Citas
+                        <li><a href="mis_citas.jsp" title="Ir al mantenimiento de la tabla Citas">Mis Citas
                                 <img src="imagen/calendario.png">
                             </a></li>
                     </ul>
@@ -189,6 +189,18 @@
 
 
         </form>
+
+        <script>
+            window.onload = function () {
+                const mensaje = sessionStorage.getItem('mensaje');
+                const tipo = sessionStorage.getItem('tipo');
+                if (mensaje) {
+                    mostrarMensaje(mensaje, tipo);
+                    sessionStorage.removeItem('mensaje');
+                    sessionStorage.removeItem('tipo');
+                }
+            }
+        </script>
 
     </body>
 

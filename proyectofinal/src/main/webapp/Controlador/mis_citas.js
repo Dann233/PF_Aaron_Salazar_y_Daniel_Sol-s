@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
     const buscarBtn_id = document.getElementById('btn-buscar-id');
-    const buscarBtn_cedula = document.getElementById('btn-buscar');
     const editarBtn = document.getElementById('btn-actualizar');
     const eliminarBtn = document.getElementById('btn-eliminar');
     const agregarBtn = document.getElementById('btn-agregar');
@@ -25,35 +24,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     document.getElementById('hora-cita').value = data.hora;
                 } else {
                     alert('Número de cita no encontrado');
-                }
-            })
-            .catch(error => {
-                console.error('Error en la búsqueda:', error);
-                document.getElementById('mensaje').innerHTML = '<p>Ocurrió un error en la búsqueda.</p>';
-            });
-    });
-
-    buscarBtn_cedula.addEventListener('click', function () {
-        const cedulabuscada = document.getElementById('cedula').value.trim();
-        if (idcita === '') {
-            alert('Por favor, ingrese un número de cita para buscar.');
-            return;
-        }
-        fetch(`../Modelo/buscar_cedula_en_cita.jsp?id_cita=${cedulabuscada}`)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Ocurrió un problema al realizar la búsqueda.');
-                }
-                return response.json();
-            })
-            .then(data => {
-                if (data.idcita && data.cedula && data.fecha && data.hora) {
-                    document.getElementById('id_cita').value = data.id_cita;
-                    document.getElementById('cedula').value = data.cedula;
-                    document.getElementById('fecha-cita').value = data.fecha;
-                    document.getElementById('hora-cita').value = data.hora;
-                } else {
-                    alert('El cliente no posee ninguna cita agendada');
                 }
             })
             .catch(error => {
