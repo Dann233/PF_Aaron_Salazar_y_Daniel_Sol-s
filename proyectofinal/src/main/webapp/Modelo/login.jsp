@@ -13,7 +13,7 @@
             response.sendRedirect("../index.jsp");
             request.setAttribute("mensaje", "Verifique que los campos no estén vacíos.");
         } else {
-            String URL = "jdbc:mysql://localhost:3306/barberia_solissalazar?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC";
+            String URL = "jdbc:mysql:// localhost:3306/barberia_solissalazar?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC";
             String nombreUsuarioDB = "root";
             String claveUsuarioDB = "Proverbios18.22";  
 
